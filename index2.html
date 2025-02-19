@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="myApp">
+        <h1>Batman Quotes {{summaSententias}}</h1>
+        <button @:click="vectisAuctor">Toggle Acthor</button>
+        <button @:click="addereSententia">Add Quote</button>
+        
+        $nbsp $nbsp
+
+        <input type="text"
+        placeholder="Add quote"
+        @keypress.enter="addereSententia"
+        v-model="nuntiusNovus">
+
+        <ul>
+            <li v-for="{sententia, auctor}, index in sententiae">
+                <span>{{index + 1}} - {{sententia}}</span>
+                <blockquote>{{auctor}}</blockquote>
+            </li>
+            <li>Frase 2</li>
+            <li>Frase 3</li>
+            <li>Frase 4</li>
+        </ul>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="app2.js"></script>
+</body>
+</html>

@@ -9,13 +9,26 @@ const app = createApp({
 
     setup(){
         const nuntius = ref("I'm Batman");
-        setTimeout(() => {
-            nuntius.value = "Soy Goku";
-            console.log(nuntius);
-        }, 1000)
+        const auctor = ref("Batman");
+        //setTimeout(() => {
+          //  nuntius.value = "Soy Goku";
+            //console.log(nuntius);
+       // }, 1000)
+
+        const mutareSententia = () => {
+            nuntius,value = "Hola, soy Goku";
+            auctor.value = "Goku";
+        }
+
+
+
+
+
         return {
             nuntius,
             auctor,
+            mutareSententia,
+            
         }
     }
 });

@@ -7,8 +7,11 @@
 </head>
 <body>
 
-    <h2>Introducción a VUE</h2>
-    <div id="myApp"></div>
+    <div id="myApp">
+        <h3>{{nuntius}}</h3>
+        <blockquote>{{auctor}}</blockquote>
+        <button v-on:click="mutareSententia"></button>
+    </div>
 
 
 
